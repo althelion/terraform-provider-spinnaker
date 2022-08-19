@@ -36,13 +36,13 @@ func Provider() terraform.ResourceProvider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"spinnaker_application":              resourceApplication(),
-			"spinnaker_pipeline":                 resourcePipeline(),
-			"spinnaker_pipeline_template":        resourcePipelineTemplate(),
-			"spinnaker_pipeline_template_config": resourcePipelineTemplateConfig(),
+			"spinnaker_application":       resourceApplication(),
+			"spinnaker_pipeline":          resourcePipeline(),
+			"spinnaker_pipeline_template": resourcePipelineTemplate(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{
-			"spinnaker_pipeline": datasourcePipeline(),
+			"spinnaker_application": datasourceApplication(),
+			"spinnaker_pipeline":    datasourcePipeline(),
 		},
 		ConfigureFunc: providerConfigureFunc,
 	}

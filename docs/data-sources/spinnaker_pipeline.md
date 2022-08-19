@@ -1,32 +1,22 @@
----
-page_title: "spinnaker_pipeline"
----
-
 # spinnaker_pipeline Data Source
 
-Read spinnaker pipeline resource
+Use this data source to get information about the spinnaker application pipeline.
 
 ## Example Usage
-
-```
-provider "spinnaker" {
-    server = "http://spinnaker-gate.myorg.io"
-}
-
-data "spinnaker_application" "terraform_example" {
-    application = "terraformexample"
-    email       = "user@example.com"
+```terraform
+data "spinnaker_pipeline" "sample-app-pipeline" {
+  application = "sample-app"
+  name        = "sample-pipeline"
 }
 ```
 
 ## Argument Reference
-
-- `application` - (Required) Spinnaker application name.
-- `name` - (Required) Pipeline name.
+The following arguments are supported:
+- `application` - (Required) The application name use to find the Spinnaker application in Spin GATE api.
+- `name` - (Required) The Spinnaker application pipeline name.
 
 ## Attribute Reference
-
-In addition to the above, the following attributes are exported:
-
-- `pipeline` - (Required) Pipeline json
-- `pipeline_id` - Pipeline ID
+* `application` - The name of the Spinnaker application.
+* `id` - The Spinnaker application pipeline unique identifier.
+* `pipeline` - The pipeline content in JSON format
+* `pipeline_id` - The Spinnamer application pipeline unique identifier.

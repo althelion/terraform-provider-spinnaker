@@ -7,7 +7,7 @@ import (
 	"log"
 	"reflect"
 
-	"github.com/tidal-engineering/terraform-provider-spinnaker/spinnaker/api"
+	"github.com/althelion/terraform-provider-spinnaker/spinnaker/api"
 	"github.com/ghodss/yaml"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 )
