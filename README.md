@@ -1,7 +1,7 @@
 # Spinnaker Terraform Provider
 
-## Spinnaker
-https://spinnaker.hub.liveramp.com
+## Setup and Install Spinnaker
+https://spinnaker.io/docs/setup/install/
 
 ## Requirements
 - [Terraform](https://www.terraform.io/downloads.html) 1.1.7
